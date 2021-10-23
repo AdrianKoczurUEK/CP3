@@ -3,8 +3,9 @@ class Rectangles{
     double b;
 
     void displayDimensions(){
-        System.out.println(a+" x "+b);
+        System.out.println(a+" x "+b); 
     }
+    
 
     void showPerimeter(){
         double perim=2*a+2*b;
