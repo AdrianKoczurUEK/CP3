@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 
 class StudentGrades{
@@ -6,9 +7,10 @@ class StudentGrades{
     String studentName;
     double[] grades;
 
-    StudentGrades(String studentName, double[] grades){
+    StudentGrades(String studentName, int numberOfGrades){
         this.studentName = studentName;
-        this.grades=grades;
+        Random randomGrades = new Random();
+        this.grades=randomGrades.doubles(numberOfGrades,0,6).toArray();
     }
 
     int gradeNumber(){
@@ -37,10 +39,8 @@ class StudentGrades{
     }
     
     public static void main(String[] args) {
-        double[] amandaGrades = {3.5, 4.5, 4.0, 2.0, 5.0, 3.5, 3.5};
-        double[] jamesGrades = {2.0, 3.0, 2.0, 4.5, 4.5};
-        StudentGrades s1 = new StudentGrades("Amanda",amandaGrades);
-        StudentGrades s2 = new StudentGrades("James", jamesGrades);
+        StudentGrades s1 = new StudentGrades("Amanda",5);
+        StudentGrades s2 = new StudentGrades("James", 2);
         s1.displayStudentInfo();
         System.out.println();
         s2.displayStudentInfo();
