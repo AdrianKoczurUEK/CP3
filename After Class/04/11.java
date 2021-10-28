@@ -1,7 +1,7 @@
 class Product {
 
-    String name;
-    boolean vegetarian;
+    private String name;
+    private boolean vegetarian;
     
     Product(String name, boolean vegetarian){
         setName(name);
